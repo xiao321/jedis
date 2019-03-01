@@ -1106,7 +1106,7 @@ public class BinaryJedis implements BasicCommands, BinaryJedisCommands, MultiKey
     final Map<byte[], byte[]> hash = new JedisByteHashMap();
     final Iterator<byte[]> iterator = flatHash.iterator();
     while (iterator.hasNext()) {
-      hash.put(iterator.next(), iterator.next());
+      hash.put((byte[])iterator.next(), (byte[])iterator.next());
     }
 
     return hash;
